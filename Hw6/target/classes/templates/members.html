@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body th:align="center">
+	<h1>멤버 리스트</h1>
+	<hr>
+	<table th:align="center" border="1" th:cellpadding="0"
+		th:cellspacing="0" th:width="700">
+		<tr>
+			<th bgcolor="orange" width="100">아이디</th>
+			<th bgcolor="orange" width="50">나이</th>
+			<th bgcolor="orange" width="100">주소</th>
+			<th bgcolor="orange" width="100">전화번호</th>
+			<th bgcolor="orange" width="50">성별</th>
+		</tr>
+
+		<tr th:each="member, state : ${memberList}">
+			<td th:text="${state.count}" th:align="center">
+			<td th:text="${member.id}" th:align="center">
+			<th th:text="${member.age}" th:align="center">
+			<th th:text="${member.address}" th:align="center">
+			<th th:text="${member.ph}" th:align="center">
+			<th th:text="${member.sex}" th:align="center">
+		</tr>
+	</table>
+</body>
+</html>

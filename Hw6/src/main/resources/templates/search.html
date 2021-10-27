@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<body th:align="center">
+<h1>멤버 검색</h1>
+<hr>
+
+<form th:action="@{/board/getBoardList}" method="post"><table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0" th:width="700">
+<tr>
+    <td align="center">
+        <input name="searchKeyword" type="text"/>
+        <input type="submit" value="검색"/>
+    </td>
+</tr>
+</table>
+</form>
+
+<table th:align="center" border="1" th:cellpadding="0" th:cellspacing="0" th:width="700">
+<tr>
+	<th bgcolor="orange" width="100">이름</th>
+	<th bgcolor="orange" width="200">나이</th>
+	<th bgcolor="orange" width="150">주소</th>
+	<th bgcolor="orange" width="150">전화번호</th>
+	<th bgcolor="orange" width="100">성별</th>
+</tr>
+
+</table>
+
+</body>
+</html>
