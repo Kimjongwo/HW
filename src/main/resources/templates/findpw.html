@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>회원 로그인</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body th:align="center">
+	<h1>로그인</h1>
+	<form th:action="findpw" method="post">
+		<table th:align="center" border="1" th:cellpadding="0"
+			th:cellspacing="0">
+			<tr>
+				<td bgcolor="orange" th:text="아이디"></td>
+				<td><input name="id" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="질문"></td>
+				<td><select name='question'>
+						<option value="sc1">초등학교 이름은?</option>
+						<option value="sc2">중학교 이름은?</option>
+						<option value="sc3">고등학교 이름은?</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td bgcolor="orange" th:text="답변"></td>
+				<td><input name="answer" type="text" size="10"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="찾기"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

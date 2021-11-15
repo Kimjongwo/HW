@@ -1,0 +1,43 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- 타임리프 -->
+  <header th:fragment="headerHtml" th:align="center"> <!-- layouts/layout.html 에 49 line 에 불러짐 -->
+     <meta charset="UTF-8"> <!-- 한글 깨짐 방지 -->
+     <!-- 페이지명 -->
+    <h1>옷자바</h1> 
+    <nav class="menu">
+      <ul>
+         <li><a id="login" th:href="@{/user/main}">로그아웃</a></li>
+         <li><a href="#" style="cursor: pointer">장바구니</a></li>
+         <li><a id="mypage" th:href="@{/user/mypage}" style="cursor: pointer">마이페이지</a></li>
+         <li><a id="post" th:href="@{/user/post}" style="cursor: pointer">Q&A</a></li>
+      </ul>
+   </nav>
+   
+  <!-- 검색 -->
+   <div id="search">
+      <form>
+      <input type="text" name="searching" placeholder="무엇을 도와드릴까요?">
+      <input type="button" value="검색">
+      </form>
+   </div><br>
+   
+   <!-- 카테고리 -->   
+   <hr>
+   <form>
+   <nav class="cloth">
+      <ul>
+         <li><span><a>신상</a></span><li>
+         <li><span><a th:href="@{/user/getProductList(division=아우터)}">아우터</a></span></li>
+         <li><span><a>상의</a></span><li>
+         <li><span><a>하의</a></span><li>
+         <li><span><a>신발</a></span><li>
+         <li><span><a>악세서리</a></span><li>
+         <li><span><a>가방</a></span><li>
+         <li style="color:red"><span>세일</span></li>
+         <li style="color:red"><span>브랜드</span></li>
+      </ul>
+      </nav>
+   </form>
+  </header>
+</html>

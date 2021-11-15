@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="~{layouts/layout}">
+
+<head>
+	<title>상세보기</title>
+</head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<div layout:fragment = "content">
+	<table style = "width : 30%">
+		<tr>
+			<td>내용</td>
+			<td th:text = "${post.question}"></td>
+		</tr>
+		<tr>
+			<td>작성 일자</td>
+			<td th:text = "${post.date}"></td>
+		</tr>
+		<tr>
+			<td>답변</td>
+			<td th:text = "${post.answer}"></td>
+		</tr>
+	</table>
+</div>
+</html>

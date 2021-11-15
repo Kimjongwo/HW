@@ -1,0 +1,87 @@
+<!-- realmain.html -->
+<html    xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="~{layouts/layout}">
+      <!--    1. 타임리프 사용시 필요
+            2. 레이아웃 사용시 필요
+            3. content 부분을 작성할 때만 사용/ 레이아웃의 위치-->
+<head>
+<title>메인 화면</title><!-- 탭 이름 -->
+</head>
+
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- 해당 문서의 문자 인코딩 방식을 명시함. -->
+   
+<div layout:fragment="content"> <!-- content 부분에 들어갈 내용을 div으로 묶는다. -->
+      <table cellspacing="50" cellpadding="0" border="1" bordercolor="linen">
+         <h2>BEST</h2>
+         <tr>
+         <td><img src="/img/best(셔츠).jpg" alt="셔츠" width="200" height="200" /></td>
+         <td><img src="/img/best(자켓).jpg" alt="자켓" width="200" height="200" /></td>
+         <td><img src="/img/best(카라티).jpg" alt="카라티" width="200" height="200"/></td>
+         <td><img src="/img/best(신발).jpg" alt="신발" width="200" height="200" /></td>
+         <td><img src="/img/best(첼시부츠).jpg" alt="첼시부츠" width="200" height="200" /></td>
+         </tr>
+         <tr align="center">
+         <td><a>[체크 셔츠]</a><br>25,000원</td>
+         <td><a>[데님 청자켓]</a><br>55,000원</td>
+         <td><a>[Polo 카라티]</a><br>30,000원</td>
+         <td><a>[Fila 운동화]</a><br>75,000원</td>
+         <td><a>[닥터마틴 첼시부츠]</a><br>11,000</td>
+         </tr>
+     </table>
+      
+      <table cellspacing="50" cellpadding="0" border="1" bordercolor="linen">
+         <h2>신상</h2>
+         <tr>
+         <td><img src="/img/신상(후드티).jpg" alt="후드티" width="200" height="200" /></td>
+         <td><img src="/img/신상(맨투맨).jpg" alt="맨투맨" width="200" height="200" /></td>
+         <td><img src="/img/신상(카라티).jpg" alt="카라티" width="200" height="200" /></td>
+         <td><img src="/img/신상(집시셔츠).jpg" alt="집시셔츠" width="200" height="200" /></td>
+         <td><img src="/img/신상(구두).jpg" alt="구두" width="200" height="200" /></td>
+         </tr>
+         <tr align="center">
+         <td><b>[Jeep 후드티]</b><br>45,000원</td>
+         <td><b>[TNT 맨투맨]</b><br>55,000원</td>
+         <td><b>[Nike 카라티]</b><br>35,000원</td>
+         <td><b>[집시셔츠]</b><br>55,000원</td>
+         <td><b>[옥스퍼드 구두]</b><br>80,000</td>
+         </tr>
+      </table>
+      
+      <table cellspacing="50" cellpadding="0" border="1" bordercolor="linen">
+         <h2>Sale</h2>
+         <tr>
+         <td><img src="/img/세일(맨투맨).jpg" alt="맨투맨" width="200" height="200" /></td>
+         <td><img src="/img/세일(반팔티).jpg" alt="반팔티" width="200" height="200" /></td>
+         <td><img src="/img/세일(반바지).jpg" alt="반바지" width="200" height="200" /></td>
+         <td><img src="/img/세일(신발).jpg" alt="신발" width="200" height="200" /></td>
+         <td><img src="/img/세일(신발2).jpg" alt="신발2" width="200" height="200" /></td>
+         </tr>
+         <tr align="center">
+         <td><b>[맨투맨]</b><br>45,000원</td>
+         <td><b>[반팔티]</b><br>35,000원</td>
+         <td><b>[츄리닝 반바지]</b><br>30,000원</td>
+         <td><b>[스탠 스미스]</b><br>75,000원</td>
+         <td><b>[반스]</b><br>75,000</td>
+         </tr>
+      </table>
+      
+      <table cellspacing="50" cellpadding="0" border="1" bordercolor="linen">
+         <h2>아우터</h2>
+         <tr>
+         <td><img src="/img/항공점퍼.jpg" alt="항공 점퍼" width="200" height="200" /></td>
+         <td><img src="/img/트렌치코트.jpg" alt="트렌치 코트" width="200" height="200" /></td>
+         <td><img src="/img/숏패딩.jpg" alt="숏패딩" width="200" height="200" /></td>
+         <td><img src="/img/가죽자켓.jpg" alt="가죽자켓" width="200" height="200" /></td>
+         <td><img src="/img/롱패딩.jpg" alt="롱패딩" width="200" height="200" /></td>
+         </tr>
+         <tr align="center">
+         <td><b>[항공 점퍼]</b><br>75,000원</td>
+         <td><b>[트렌치 코트]</b><br>115,000원</td>
+         <td><b>[숏패딩]</b><br>60,000원</td>
+         <td><b>[가죽자켓]</b><br>85,000원</td>
+         <td><b>[롱패딩]</b><br>150,000</td>
+         </tr>
+      </table>
+</div>
+</html>

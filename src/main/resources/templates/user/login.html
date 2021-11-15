@@ -1,0 +1,66 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>회원 로그인</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+      body{
+         background-color:linen;
+         
+         margin-right:30px;
+         }
+         
+      header h1 { 
+            text-align:center;
+            color:blue;
+            font-size:50px;
+            font-weight:100;
+            font-family:Arial,"Times New Roman",serif;
+            font-style:normal;
+            text-shadow:3px 3px 5px gray;
+            display: inline-block;
+   }
+      section h2{
+         text-align:center;
+         border-top:1px solid blue;
+         border-bottom:1px solid blue;
+         }
+   
+   </style>
+
+</head>
+<header>
+   <h1>옷자바</h1>
+</header>
+<body th:align="center">
+   <section>
+   <h2>로그인</h2>
+   </section>
+   <form th:action="login" method="post">
+   
+   
+      <table th:align="center" border="" bordercolor="linen">
+         <tr>
+            <td th:text="아이디"></td>
+            <td><input name="id" type="text" size="20"></td>
+         </tr>
+         <tr>
+            <td th:text="비밀번호"></td>
+            <td><input name="password" type="password" size="20"></td>
+         </tr>
+         
+         <tr>
+         
+            <td colspan="2" align="center">
+               <input type="submit" value="로그인">
+               
+            </td>
+         </tr>
+      </table>
+      <input type="button" value="회원가입" onclick="location.href='insertUser'">
+      <input type="button" value="비밀번호 찾기" onclick="">
+      
+      
+   </form>
+</body>
+</html>

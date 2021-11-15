@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<th:block >
+		<script>
+			top.alert("[[${data.message}]]");
+		</script>
+	</th:block>
+	<th:block >
+		<script>
+			top.location.href = '[[${data.href}]]';
+		</script>
+	</th:block>
+</head>
+</html>

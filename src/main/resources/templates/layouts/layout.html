@@ -1,0 +1,58 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html
+  lang="ko" 
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <!-- 1. lang="ko" : 
+  없어도 되지만 명시되어 있으면 해당 언어에 알맞게 번역되어 
+  올바른 해석으로 정보를 전달할 수 있게 된다고 합니다. -->
+  <head> <!-- layout의 head 부분은 CSS내용을 작성합니다. -->
+     <style>
+         h1 { 
+            text-align:center;
+            color:blue;
+            font-size:50px;
+            font-weight:100;
+            font-family:Arial,"Times New Roman",serif;
+            font-style:normal;
+            text-shadow:3px 3px 5px gray;
+            display: inline-block;
+         }
+         nav {
+            display: inline-block;
+         }
+         header .menu li{
+            text-align:right;
+            display : inline-block;
+            
+         }
+         header .menu li a{
+            text-decoration:none;
+            font-size:20px;
+            padding:30px;
+         }
+         header .menu li a:hover{color:yellow;}
+         .cloth ul li{display:inline;}
+         .cloth ul li span a{
+            cursor:pointer;
+            font-size:18px;
+            padding:30px;
+         }
+         .cloth ul li span a:hover{
+         color:blue; 
+         text-decoration:underline;
+         }
+         td img{transition:width 1s,height 1s;}
+         td img:hover{width:300px;height:300px;}
+      </style>
+  </head>
+
+  <header th:replace="fragments/header :: headerHtml"></header>
+
+  <div layout:fragment="content"></div>
+  
+  <br>
+
+  <footer th:replace="fragments/footer :: footerFragment"></footer>
+</html>

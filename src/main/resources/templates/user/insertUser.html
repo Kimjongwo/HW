@@ -1,0 +1,91 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원 가입</title>
+   <style>
+      body{
+         background-color:linen;
+         
+         margin-right:30px;
+         }
+         
+      header h1 { 
+            text-align:center;
+            color:blue;
+            font-size:50px;
+            font-weight:100;
+            font-family:Arial,"Times New Roman",serif;
+            font-style:normal;
+            text-shadow:3px 3px 5px gray;
+            display: inline-block;
+   }
+      section h2{
+         text-align:center;
+         border-top:1px solid blue;
+         border-bottom:1px solid blue;
+         }
+   
+   </style>
+
+</head>
+<header>
+   <h1>옷자바</h1>
+</header>
+
+<body th:align="center">
+   <section>
+   <h2>회원 가입</h2>
+   </section>
+   <br>
+   
+   <form th:action="@{/user/insertUser}" method="post">
+      
+      <table th:align="center" border="" bordercolor="linen">
+         <tr>
+         
+            <td th:text="아이디"></td>
+            <td>
+               <input  name="id" type="text" size="15">
+               <input type="submit" value="중복확인">
+            </td>   
+         </tr>
+         <tr>
+            <td th:text="이름"></td>
+            <td><input name="name" type="text" size="15"></td>
+         </tr>
+         <tr>
+            <td th:text="비밀번호"></td>
+            <td><input name="password" type="password" size="15" placeholder="영문 or 숫자"></td>
+         </tr>
+         <tr>
+            <td  th:text="이메일"></td>
+            <td><input name="email" type="text" size="15"></td>
+         </tr>
+         <tr>
+            <td th:text="핸드폰번호"></td>
+            <td><input name="PhoneNum" type="text" size="15"></td>
+         </tr>
+         <tr>
+            <td th:text="주소"></td>
+            <td><input name="address" type="text" size="15"></td>
+         </tr>
+         <tr>
+            <td th:text="질문"></td>
+            <td><select name='question'>
+                  <option value="sc1">초등학교 이름은?</option>
+                  <option value="sc2">중학교 이름은?</option>
+                  <option value="sc3">고등학교 이름은?</option>
+            </select></td>
+         </tr>
+         <tr>
+            <td th:text="답변"></td>
+            <td><input name="answer" type="text" size="15"></td>
+         </tr>
+         
+      </table>      
+      <input type="submit" value="회원 가입">
+      <input type="button" onclick="location.href='main'" value="취소">
+         
+   </form>
+</body>
+</html>

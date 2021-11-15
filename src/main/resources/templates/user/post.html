@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="~{layouts/layout}">
+	
+<head>
+	<title>Q&A</title>
+</head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<div layout:fragment="content">
+	<h2>CS Center</h2>
+	<table style = "width : 80%">
+	
+		<tr>
+			<td style = "text-align : center">번호</td>
+			<td style = "text-align : center">내용</td>
+		</tr>
+		<tr th:each = "post, state : ${postList}">
+			<td style = "text-align : center" th:text = "${post.pn}"></td>
+			<td  style ="border : 1px solid" >
+				<a th:href = "@{'/user/post/' + ${post.pn}}"> 
+					<span th:text = "${post.question}"></span>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<input type="button" value="글 쓰기" onclick="location.href='newpost'">
+</div>
+</html>
