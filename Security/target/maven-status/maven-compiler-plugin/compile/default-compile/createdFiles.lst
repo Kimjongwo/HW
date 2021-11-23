@@ -1,0 +1,8 @@
+com\example\demo\Controller\LoginController.class
+com\example\demo\Service\MemberService.class
+com\example\demo\SecurityApplication.class
+com\example\demo\Service\MemberServiceImpl.class
+com\example\demo\config\SecurityConfig.class
+com\example\demo\auth\LoginService.class
+com\example\demo\Domain\Member.class
+com\example\demo\Repository\MemberRepository.class
